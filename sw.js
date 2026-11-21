@@ -1,5 +1,6 @@
 // Keeps the application itself available without network. Data never goes through here: GitHub is not cached.
-const CACHE = 'cordee-compagnon-v2'
+// v3: the icon became Nodi's face (1.19); a new name makes every phone fetch it again.
+const CACHE = 'cordee-compagnon-v3'
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(['./', './index.html', './manifest.webmanifest', './icon-512.png'])))
